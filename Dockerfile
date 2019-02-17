@@ -4,9 +4,9 @@ MAINTAINER FIT2CLOUD <support@fit2cloud.com>
 
 RUN mkdir -p /opt/apps
 
-ADD target/tao-demo-app-1.0-${BUILD_NUMBER}.zip /opt/apps
+ADD target/tao-demo-app-1.0-#BUILD_NUMBER#.zip /opt/apps
 
-ENV JAVA_APP_JAR=/opt/apps/tao-demo-app-1.0-${BUILD_NUMBER}.zip
+ENV JAVA_APP_JAR=/opt/apps/tao-demo-app-1.0-#BUILD_NUMBER#.zip
 
 ENV AB_OFF=true
 
