@@ -4,9 +4,9 @@ MAINTAINER FIT2CLOUD <support@fit2cloud.com>
 
 RUN mkdir -p /opt/fit2cloud-demo
 
-ADD target/tao-demo-app-1.0-2.jar /opt/fit2cloud-demo
+ADD target/tao-demo-app-1.0.jar /opt/fit2cloud-demo
 
-ENV JAVA_APP_JAR=/opt/fit2cloud-demo/tao-demo-app-1.0-2.jar
+ENV JAVA_APP_JAR=/opt/fit2cloud-demo/tao-demo-app-1.0.jar
 
 ENV AB_OFF=true
 
