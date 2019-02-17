@@ -2,11 +2,11 @@ FROM registry.fit2cloud.com/fit2cloud2/fabric8-java-alpine-openjdk8-jre
 
 MAINTAINER FIT2CLOUD <support@fit2cloud.com>
 
-RUN mkdir -p /opt/apps
+RUN mkdir -p /opt/fit2cloud-demo
 
-ADD target/tao-demo-app-1.0-2.zip /opt/apps
+ADD target/tao-demo-app-1.0-2.jar /opt/apps
 
-ENV JAVA_APP_JAR=/opt/apps/tao-demo-app-1.0-2.zip
+ENV JAVA_APP_JAR=/opt/fit2cloud-demo/tao-demo-app-1.0-2.jar
 
 ENV AB_OFF=true
 
