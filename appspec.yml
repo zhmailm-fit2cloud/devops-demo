@@ -2,7 +2,7 @@ version: 4.2
 os: linux
 files:
   - source: /target/tao-demo-app-1.0-2.jar
-    destination: /opt/apps/tao-demo-app-1.0-2.jar
+    destination: /opt/fit2cloud-demo/tao-demo-app-1.0-2.jar
 hooks:
   ApplicationStop:
     - location: scripts/stop.sh
