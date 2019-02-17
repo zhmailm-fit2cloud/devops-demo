@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.fit2cloud.qatest</groupId>
@@ -9,9 +9,35 @@
 	<version>1.0</version>
 	<name>Fit2Cloud CodeDeploy QA test</name>
 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.13.RELEASE</version>
+		<relativePath />
+		<!-- lookup parent from repository 1.5.7.RELEASE -->
+	</parent>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
 	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -37,7 +63,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
 	<distributionManagement>
 		<!-- Publish the versioned releases here -->
 		<repository>
@@ -48,7 +73,7 @@
 		<snapshotRepository>
 			<id>fit2cloud-example</id>
 			<url>http://repository.fit2cloud.com/content/repositories/snapshots/</url>
-		</snapshotRepository>			
+		</snapshotRepository>
 	</distributionManagement>
 
 	<!-- download artifacts from this repo -->
