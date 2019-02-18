@@ -1,7 +1,6 @@
 #!/bin/bash
 
 processesNum=`docker ps | grep registry.fit2cloud.com/north/miao/devops | grep -v grep | wc -l | sed 's/ //g'`
-docker ps | grep registry.fit2cloud.com/north/miao/devops | grep -v grep
 echo process number is $processesNum
 if [ "$processesNum" == "1" ];then
     echo app deployed successfully!
