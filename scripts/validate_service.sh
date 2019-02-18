@@ -1,7 +1,7 @@
 #!/bin/bash
 
-processesNum=`ps aux | grep SimpleHTTPServer | grep 8080 | grep -v grep | wc -l | sed 's/ //g'`
-ps aux | grep SimpleHTTPServer  | grep 8080 | grep -v grep
+processesNum=`ps aux | grep /opt/fit2cloud-demo/tao-demo-app-1.0.jar | grep 8081 | grep -v grep | wc -l | sed 's/ //g'`
+ps aux | grep /opt/fit2cloud-demo/tao-demo-app-1.0.jar  | grep 8081 | grep -v grep
 echo process number is $processesNum
 if [ "$processesNum" == "1" ];then
     echo app deployed successfully!
