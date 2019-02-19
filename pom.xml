@@ -83,24 +83,34 @@
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-		<!-- Publish the versioned releases here -->
-		<repository>
-			<id>fit2cloud-example</id>
-			<name>Fit2Cloud Example Release</name>
-			<url>http://repository.fit2cloud.com/content/repositories/releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>fit2cloud-example</id>
-			<url>http://repository.fit2cloud.com/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<!-- download artifacts from this repo -->
 	<repositories>
 		<repository>
-			<id>fit2cloud-public</id>
-			<name>Fit2Cloud Public Repository</name>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/libs-milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>jcenter-snapshots</id>
+			<name>jcenter</name>
+			<url>https://jcenter.bintray.com/</url>
+		</repository>
+		<repository>
+			<id>fit2cloud-enterprise-release</id>
+			<name>Fit2Cloud Enterprise Release</name>
+			<url>http://repository.fit2cloud.com/content/repositories/fit2cloud-enterprise-release/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>fit2cloud</id>
+			<name>fit2cloud</name>
 			<url>http://repository.fit2cloud.com/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
@@ -110,12 +120,10 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
-	<!-- download plugins from this repo -->
 	<pluginRepositories>
 		<pluginRepository>
-			<id>fit2cloud-public</id>
-			<name>Fit2Cloud Public Repository</name>
+			<id>fit2cloud</id>
+			<name>fit2cloud</name>
 			<url>http://repository.fit2cloud.com/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
@@ -125,4 +133,16 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://repository.fit2cloud.com/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://repository.fit2cloud.com/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
